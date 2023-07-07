@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart Disease Prediction</title>
+  </head>
+  <body>
+    <h1>Heart Disease Prediction</h1>
+    <form method="POST" action="/predict">
+      <label for="Age">Age:</label>
+      <input type="text" name="age" required><br><br>
+      <label for="Sex">Sex:</label>
+      <input type="text" name="sex" required><br><br>
+      <label for="Chest pain type">Chest pain type:</label>
+      <input type="text" name="chest pain type" required><br><br>
+      <label for="BP">BP:</label>
+      <input type="text" name="bp" required><br><br>
+      <label for="Cholesterol">Cholesterol:</label>
+      <input type="text" name="cholesterol" required><br><br>
+      <label for="FBS over 120">FBS over 120:</label>
+      <input type="text" name="FBS over 120" required><br><br>
+      <label for="EKG results">EKG results:</label>
+      <input type="text" name="EKG results" required><br><br>
+      <label for="Max HR">Max HR:</label>
+      <input type="text" name="Max HR" required><br><br>
+      <label for="Exercise angina">Exercise angina:</label>
+      <input type="text" name="Exercise angina" required><br><br>
+      <label for="ST depression">ST depression:</label>
+      <input type="text" name="ST depression" required><br><br>
+      <label for="Slope of ST">Slope of ST:</label>
+      <input type="text" name="Slope of ST" required><br><br>
+      <label for="Number of vessels fluro">Number of vessels fluro:</label>
+      <input type="text" name="Number of vessels fluro" required><br><br>
+      <label for="Thallium">Thallium:</label>
+      <input type="text" name="Thallium" required><br><br>
+
+      <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+      <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
